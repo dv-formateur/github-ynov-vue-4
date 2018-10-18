@@ -9,11 +9,11 @@ URL vers le projet déployé (à récupérer dans Readme: "URL du projet:"
 
 UI: Bootstrap
 
+---------------------------------------------------
 
 Application Github Ynov
 
-Choix       Choix       Choix
-projet      période     compte
+Choix projet | Choix période | Choix compte
 
 
 Nom Prenom        Lien projet Github
