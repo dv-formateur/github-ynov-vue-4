@@ -27,16 +27,15 @@
 			<div class="row">
 				<div class="col-sm">
 					<!-- Choix Projet -->
-					<input type="text" v-model="nomProjet" name="nomProjet">
+					<input type="text" v-model="nomProjet" name="nomProjet" width="100%">
 				</div>
 				<div class="col-sm">
 					<!-- Choix période -->
-					<input id="datepicker1" width="300" /><input id="datepicker2" width="300" />
-					
+					<input id="datepicker1" width="100%" /><input id="datepicker2" width="100%" />
 				</div>
 				<div class="col-sm">
 					<!-- Choix compte -->
-					<select class="form-control" id="sel1">
+					<select class="form-control" v-model="etu" id="sel1">
 						<option>Coblestone</option>
 						<option>AlexDesvallees</option>
 						<option>alixnzt</option>

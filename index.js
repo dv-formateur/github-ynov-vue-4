@@ -6,6 +6,7 @@ new Vue({
 		repo: null,
 		com: null,
 		nomProjet: "",
+		etu: "Coblestone",
 		toHide: true,
 	  }
 	},
@@ -13,15 +14,15 @@ new Vue({
 	methods: {
 		callApi: function (event) {
 			axios
-				.get('https://api.github.com/users/Coblestone?access_token=371a6841ab9ef7405a6a84bd04a33b7c085e62b3')
+				.get('https://api.github.com/users/' + this.etu + '?access_token=ef7138e53297bb8674a4f978959c7c8ae8021ea1 ')
 				.then(response => (this.user = response.data))
 			
 			axios
-				.get('https://api.github.com/repos/Coblestone/'+this.nomProjet+'?access_token=371a6841ab9ef7405a6a84bd04a33b7c085e62b3')
+				.get('https://api.github.com/repos/' + this.etu + '/' + this.nomProjet + '?access_token=ef7138e53297bb8674a4f978959c7c8ae8021ea1 ')
 				.then(response => (this.repo = response.data))
 
 			axios
-				.get('https://api.github.com/repos/Coblestone/'+this.nomProjet+'/commits?access_token=371a6841ab9ef7405a6a84bd04a33b7c085e62b3')
+				.get('https://api.github.com/repos/' + this.etu + '/' + this.nomProjet + '/commits?access_token=ef7138e53297bb8674a4f978959c7c8ae8021ea1 ')
 				.then(response => (this.com = response.data))
 		}
 
