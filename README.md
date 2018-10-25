@@ -24,3 +24,7 @@ Nom Prenom        Lien projet Github
  
 Nom Prenom        Lien projet Github
  > Commit sur la période
+
+
+UPDATE 25/10:
+Actuellement il faut cliquer sur "Rechercher" deux fois. La seconde une fois que les appels api sont effectués. Une des choses à changer.
