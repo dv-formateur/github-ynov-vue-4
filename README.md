@@ -27,4 +27,4 @@ Nom Prenom        Lien projet Github
 
 
 UPDATE 25/10:
-Actuellement il faut cliquer sur "Rechercher" deux fois. La seconde une fois que les appels api sont effectués. Une des choses à changer.
+Actuellement il faut cliquer sur "Rechercher" deux fois. La seconde une fois que les appels api sont effectués. Une des choses à changer. Une autre est le fait qu'il soit nécessaire de renseigner au moins une date pour que ça marche, si aucune reiseignée alors pas de commit affiché.
