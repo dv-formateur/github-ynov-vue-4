@@ -50,7 +50,7 @@
 		
 		<title>Github Ynov</title>
 	</head>
-	<body style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+	<body style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);"> <!--  height: 100% si plus grand que ecran,  height: 100vh sinon -->
 		<div class="container" id="app">
 			<h1 style="text-align: center">Application Github Ynov</h1><br/>
 			<div class="row">
@@ -99,33 +99,29 @@
 			</div>
 			<br/>
 			
-			<div v-for="(item, index) in etu" v-if="user[index]!=null">
+			<div v-for="(item, index) in etu" v-if="displayAnswer">
 				<div class="card" border-variant="dark" header="Dark">
 					<!-- Entête -->
 					<div class="card-header">
 						<div class="row">
-							<div class="col" v-if="user[index]!=null">
-								{{etu[index]}} - {{ user[index].name }}
+							<div class="col">
+								{{item}}
 							</div>
-							<div class="col" v-if="repo[index]!=null">
-								{{ repo[index].html_url }}
+							<div class="col">
+								https://github.com/{{item}}/{{nomProjet}}
 							</div>
 						</div>
 					</div>
 					<!-- Commit sur la période -->
 					<div class="card-body">
-						<div class="row" v-if="isComNotNull()">
-							<div class="col">
-								<div v-for="(item, i) in commitToDisplay[index]">
-									{{commitToDisplay[index][i][0]}}
-								</div>
-							</div>
-							<div class="col">
-								<div v-for="(item, i) in commitToDisplay[index]">
-									{{commitToDisplay[index][i][1]}}
-								</div>
-							</div>
-						</div>
+						<table class="table">
+							<tbody v-if="isComNotNull()">
+								<tr v-for="(itm, i) in commitToDisplay[index]">
+									<td>{{commitToDisplay[index][i][0]}}</td>
+									<td>{{commitToDisplay[index][i][1]}}</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 				<br/>
